@@ -1,5 +1,5 @@
 # Healthy-Laptop-Battery
-Some python programmes related to keeping your laptop's battery healthy
+Python automation to increase your laptop battery's lifespan
 
 ## Overview
 
@@ -43,7 +43,7 @@ Battery Monitor is a Python script designed to help users manage their laptop ba
 ## Additional Notes
 
 - *Automation:*
-  - Instead of Task Scheduler, you can also use 3rd party service managers like NSSM (Non Sucking Service Manager)
+  - Instead of Task Scheduler, you can also use 3rd party service managers like [NSSM](https://nssm.cc/) (Non Sucking Service Manager)
 
 - *Customization:*
   - Modify the script as needed, e.g., adjusting notification timeout, checking frequency, or adding extra functionality.
