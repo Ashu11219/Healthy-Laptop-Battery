@@ -3,12 +3,14 @@ from plyer import notification
 import time
 
 def get_battery_status():
+    """The function to receive battery and charging status"""
     battery = psutil.sensors_battery()
     plugged = battery.power_plugged
     percent = battery.percent
     return plugged, percent
 
 def show_notification(title, message):
+    """The function to show notifications"""
     notification.notify(
         title=title,
         message=message,
@@ -16,6 +18,7 @@ def show_notification(title, message):
     )
 
 def main():
+    """The master function to integrate and control everything"""
     while True:
         plugged, percent = get_battery_status()
 
@@ -23,7 +26,7 @@ def main():
             show_notification('Battery Monitor', f'Warning: Battery at {percent}% - Unplug Charger!')
 
         elif not plugged and percent < 30:
-            show_notification('Battery Monitor', f'Emergency: Battery critically low at {percent}% - Plug in Charger!')
+            show_notification('Battery Monitor', f'Emergency: Battery to be dead, at {percent}% rn - Plug in Charger!')
 
         time.sleep(60)  # Check every 1 minute (adjust as needed)
 
