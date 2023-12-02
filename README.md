@@ -19,8 +19,8 @@ Battery Monitor is a Python script designed to help users manage their laptop ba
 
 2. *Run the Script:*
    - Execute the `battery_monitor.py` script to start monitoring your laptop's battery.
-   - You can also make it run automatically by using Windows Scheduler. Steps as follows:-
-     - Open Windows Scheduler by search menu or by run dialog using `taskschd.msc`
+   - You can also make it run automatically by using Task Scheduler (Built in with Windows). Steps as follows:-
+     - Open Task Scheduler by search menu or by run dialog using `taskschd.msc`
      - Create a Basic Task from right-hand actions pane
      - Give a name (and description, if you wish to) and click on next
      - Select the start timing of task (preferably on startup or on user log on)
@@ -41,6 +41,9 @@ Battery Monitor is a Python script designed to help users manage their laptop ba
    - To stop the script, manually terminate the execution or "Stop" the schedule via Windows Scheduler.
 
 ## Additional Notes
+
+- *Automation:*
+  - Instead of Task Scheduler, you can also use 3rd party service managers like NSSM (Non Sucking Service Manager)
 
 - *Customization:*
   - Modify the script as needed, e.g., adjusting notification timeout, checking frequency, or adding extra functionality.
